@@ -1,0 +1,126 @@
+<!DOCTYPE>
+    <html>
+    <head>
+        <title> Local storage</title>
+        <style type="text/css">
+
+    table#table1{
+        width: 10%; 
+        background-color: #gray;
+    }
+
+        </style>
+
+
+
+   <script>
+              function saveMy(){
+                if(localStorage.getItem('names')){
+                data=JSON.parse(localStorage.getItem('names'));
+                }else{
+                    data=[];
+                }
+                var object={
+                        name:"",
+                        comment:""
+                    }
+               object.name = document.getElementById('name').value;
+               object.comment = document.getElementById('com').value;
+               data.push(object);
+               console.log(object)
+               localStorage.setItem('names', JSON.stringify(data));
+             }
+
+              function load(){
+
+                 data = JSON.parse(localStorage.getItem('names'));
+                  console.log(data)
+
+                          // document.getElementById('textfield2').value = data[0].name;
+                          // document.getElementById('textfield3').value = data[0].comment;
+                          // document.getElementById('textfield4').value = data[1].name;
+                          // document.getElementById('textfield5').value = data[1].comment;
+                  console.log(data.length);
+
+
+
+
+
+                var myTableDiv = document.getElementById("dt");
+                  
+                var table = document.createElement('TABLE');
+                table.border='1';
+                
+                var tableBody = document.createElement('TBODY');
+                table.appendChild(tableBody);
+                  
+                var counter=0;
+
+                for (var i=0; i<data.length; i++)
+                {
+                   var tr = document.createElement('TR');
+                   tableBody.appendChild(tr);
+                 
+
+                       for (var j=0; j<2; j++)
+                       {
+                           var td = document.createElement('TD');
+                           td.width=200;
+                        
+
+                                       if(j==0){
+                                        td.appendChild(document.createTextNode("Cell " + data[counter].name));
+                                            }
+                                        else{                       
+                                           td.appendChild(document.createTextNode("Cell " + data[counter].comment));
+                                        }
+
+                               tr.appendChild(td);
+                        }
+                           counter++;
+                 }
+
+                        myTableDiv.appendChild(table);
+
+      }
+
+    </script>
+
+
+
+
+    </head>
+    <body onload="load()">
+              Comments-<br>
+
+                                <hr>
+
+
+                    Name: <input type="text" id="name" /><br>
+                    Comments: <textarea rows="4" cols="50" name="comment" form="usrform" id="com"></textarea>
+
+
+
+                    <input type="button" value="save" onclick="saveMy()"/>
+                    <input type="button" value="remove" onclick="removeMy()"/>
+                    <hr/>
+
+
+
+
+
+    <br>
+    <div id="dt">
+        
+
+
+    </div>
+
+
+
+    </body>
+
+
+
+
+    </html>

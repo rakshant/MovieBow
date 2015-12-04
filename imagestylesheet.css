@@ -1,0 +1,51 @@
+div.cast img{
+
+	height: 120px;
+	width: 120px;
+	border: 2px solid white;
+}
+
+div.castparent{
+	margin-left: 29%;
+	
+  margin-top: -17%;
+}
+div.cast{
+	height:120px;
+	width: 120px;
+	position: relative;
+	display: inline-block;
+	margin: 1em 1em 1em 1em;
+}
+
+span.text-content{
+	background: rgba(0,0,0,0.5);
+	height: 120px;
+	width: 120px;
+	display: table;
+	position: absolute;
+	left:0;
+	top: 0;
+	opacity:0;
+	transition: opacity 500ms;
+}
+
+span.text-content span {
+  display: table-cell;
+  /*margin-top: 10%;*/
+  text-align: center;
+  /*vertical-align: middle;*/
+}
+
+div.cast h1{
+
+	margin-top: 70%;
+	font-size: 15px;
+	font-weight: bold;
+	color:white;
+}
+
+div.cast:hover 
+span.text-content {
+  opacity: 0.8;
+}

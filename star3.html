@@ -1,0 +1,127 @@
+<html>
+<head><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+<style>
+
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+#show
+{
+  background-image: url("star1.png") ;
+
+background-repeat: repeat;
+visibility: visible;
+width: 100px;
+height: 20px;
+  /*width:10px;*/
+}
+</style>
+</head>
+<body>
+<h1>Pure CSS Star Rating Widget</h1>
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" onclick="star(5)"/><label class = "full" for="star5" title="Awesome - 5 stars" ></label>
+
+    <input type="radio" id="star4half" name="rating" value="4 and a half" onclick="star(45)"/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+
+    <input type="radio" id="star4" name="rating" value="4" onclick="star(4)" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+
+    <input type="radio" id="star3half" name="rating" value="3 and a half" onclick="star(35)"/><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+
+    <input type="radio" id="star3" name="rating" value="3" onclick="star(3)"/><label class = "full" for="star3" title="Meh - 3 stars"></label>
+
+    <input type="radio" id="star2half" name="rating" value="2 and a half" onclick="star(25)"/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+
+    <input type="radio" id="star2" name="rating" value="2" onclick="star(2)"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+
+    <input type="radio" id="star1half" name="rating" value="1 and a half" onclick="star(15)"/><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+
+    <input type="radio" id="star1" name="rating" value="1" onclick="star(1)"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+
+    <input type="radio" id="starhalf" name="rating" value="half" onclick="star(50)"/><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+
+</fieldset>
+<br/>
+<p id="show"></p>
+<script>
+function star(str)
+{
+
+    // document.getElementById("show").innerHTML=;
+    switch(str)
+    {
+        case 50:document.getElementById("show").innerHTML="your rating:0.5";
+       document.getElementById("show").style.width = 10 + "px";
+        break;
+        case 1:document.getElementById("show").innerHTML="your rating:1";
+        document.getElementById("show").style.width = 20 + "px";
+        break;
+        case 15:document.getElementById("show").innerHTML="your rating:1.5";
+        document.getElementById("show").style.width = 30 + "px";
+        break;
+        case 2:document.getElementById("show").innerHTML="your rating:2";
+        document.getElementById("show").style.width = 40 + "px";
+        break;
+        case 25:document.getElementById("show").innerHTML="your rating:2.5";
+        document.getElementById("show").style.width = 50 + "px";
+        break;
+        case 3:document.getElementById("show").innerHTML="your rating:3";
+        document.getElementById("show").style.width = 60 + "px";
+        break;
+        case 35:document.getElementById("show").innerHTML="your rating:3.5";
+        document.getElementById("show").style.width = 70 + "px";
+        break;
+        case 4:document.getElementById("show").innerHTML="your rating:4";
+        document.getElementById("show").style.width = 80 + "px";
+        break;
+        case 45:document.getElementById("show").innerHTML="your rating:4.5";
+document.getElementById("show").style.width = 90 + "px";
+        break;
+        case 5:document.getElementById("show").innerHTML="your rating:5";
+        document.getElementById("show").style.width = 100 + "px";
+        break;
+       
+    }
+}
+
+</script>
+</body>
+</html>

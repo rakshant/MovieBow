@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style3.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
+ <link rel="stylesheet" href="stylesheet.css">
+      <link rel="stylesheet" href="imagehoverexpt.css">
+      <link rel="stylesheet" href="imagestylesheet.css">
+
+
+
+        <script>
+     function saveMy(){
+
+                if(localStorage.getItem('names')){
+                data=JSON.parse(localStorage.getItem('names'));
+                }else{
+                    data=[];
+                }
+                var object={
+                        name:"",
+                        comment:""
+                        
+                    }
+               object.name = document.getElementById('name').value;
+               object.comment = document.getElementById('com').value;
+               data.push(object);
+               console.log(object)
+               localStorage.setItem('names', JSON.stringify(data));
+             }
+
+              function load(){
+
+                 data = JSON.parse(localStorage.getItem('names'));
+                  console.log(data)
+
+                          // document.getElementById('textfield2').value = data[0].name;
+                          // document.getElementById('textfield3').value = data[0].comment;
+                          // document.getElementById('textfield4').value = data[1].name;
+                          // document.getElementById('textfield5').value = data[1].comment;
+                  console.log(data.length);
+
+
+
+
+
+                var myTableDiv = document.getElementById("dt");
+                  
+                var table = document.createElement('TABLE');
+                table.border='1';
+                
+                var tableBody = document.createElement('TBODY');
+                table.appendChild(tableBody);
+                  
+                var counter=0;
+
+                for (var i=0; i<data.length; i++)
+                {
+                   var tr = document.createElement('TR');
+                   tableBody.appendChild(tr);
+                 
+
+                       for (var j=0; j<2; j++)
+                       {
+                           var td = document.createElement('TD');
+                           
+                        
+
+                                       if(j==0){
+                                        td.appendChild(document.createTextNode("Cell " + data[counter].name));
+                                        td.width=200;
+                                            }
+                                        else{                       
+                                           td.appendChild(document.createTextNode("Cell " + data[counter].comment));
+                                           td.width=600;
+                                        }
+
+                               tr.appendChild(td);
+                        }
+                           counter++;
+                 }
+
+                        myTableDiv.appendChild(table);
+
+      }
+
+  
+    </script>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body onload="load()">
+
+ <div class="header">
+          <div class="banner">
+
+
+Moviebow
+
+
+<!-- 
+                  <div class="first">
+                               Moviebow
+
+                  </div>
+                  <div class="second">
+                  <h1>  
+                  </div> -->
+
+          </div>
+                
+          <div class="menu text-glow-hover">
+                          <ul>
+                             <li>Action</li>
+                             <li>Drama</li>
+                             <li>Sci-fi</li>
+                             <li>Horror</li>
+                             <li>Romance</li>
+                          </ul>
+          </div>
+
+                     
+    </div>
+
+
+
+<div class="content">
+
+
+
+
+
+    <div class="element">
+         
+
+         <div class="moviepic">
+             <a href="http://www.youtube.com/watch?v=clbSd2JzAqc" target=_blank>
+             <img src="images\action\avengers.jpg" id="image1">
+              <span class="movie-content">
+              <span>
+              <img src="play.png" id="icon">
+                <h1>TRAILER</h1>
+             </span></span> </a>
+          </div> 
+       
+          <div class="text">
+              <div id="movietitle"> AVENGERS </div>
+                     When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of the Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.
+
+                <div id="more">
+                      <br/>Release date: April 24, 2015 (India)
+                      <br/>Director: Joss Whedon
+                      <br/>Running time: 3h 15m
+                      <br/>Initial DVD release: October 2, 2015
+                      <br/>Film series: The Avengers film series </br>
+                 </div>
+      
+          </div>
+
+
+
+           <div class="castparent">
+           <div class="cast">
+              <img src="images\action\cast\chris_evans.jpg">
+              <span class="text-content"><span><h1>Chris Evans</h1></span></span>
+           </div>
+           <div class="cast">
+              <img src="images\action\cast\scarlett_johansson.jpg">
+              <span class="text-content"><span><h1>Michiel</h1></span></span>
+           </div>
+           <div class="cast">
+              <img src="images\action\cast\robert_downey.jpg">
+              <span class="text-content"><span><h1>Harrison Ford</h1></span></span>
+           </div>
+         </div>
+ 
+
+
+
+
+          <div id="com">
+                   Comments-<br>
+
+                                <hr>
+
+
+                    Name: <input type="text" id="name" /><br>
+                    Comments: <textarea rows="4" cols="50" name="comment" form="usrform" id="com"></textarea>
+
+
+
+                    <input type="button" value="save" onclick="saveMy()"/>
+                
+                    <hr/>   
+                    <br>      
+
+
+                     <div id="dt"> </div>
+
+          </div>
+
+      </div>
+
+   </div>
+
+
+  <div class="footer">
+   
+            <p>Copyright &copy; 2015 Moviebow Inc. All rights reserved.</p>
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>

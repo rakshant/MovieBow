@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link type="text/css" rel="stylesheet" href="style4.css">
+    <link type="text/css" rel="stylesheet" href="style3.css">
+    <link type="text/css" rel="stylesheet" href="poplogin.css">
+    <script src="abc.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<script src="ls.js">
+</script>
+</head>
+
+<body onload="loading()">
+    <div class="header">
+        <div class="banner">
+            <div id="pagetitle"> &nbsp;&nbsp;&nbsp;&nbsp;Moviebow </div>
+            <div id="load1"></div><div id="load2"></div><div id="load3" onclick="logcheck()"></div>
+
+           <!--  <div id="signup"><a href="#popup2">SIGN UP </a></div>
+            <div id="signup"><a href="#popup3">LOGIN </a></div> -->
+            <div id="popup2" class="overlay">
+                <div class="popup">
+                    <div class="content1">
+                        <a class="close" href="#">&times;</a>
+                        <div id="formtext">
+                            <div id="logintitle"> SIGN UP </div>
+                            <form id="formdata" action="#popup3" method="get">
+                                Username:
+                                <input type="text" name="username" id="signup1" minlength="6" required> </br>
+                                Email ID:
+                                <input type="email" name="emailid" id="signup2" placeholder="abc@example.com" required> </br>
+                                Password:
+                                <input type="password" name="password" id="signup3" minlength="6" required> </br>
+                                <input type="submit" name="signupdata" value="SIGN UP" onclick="saveMy()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup3" class="overlay">
+                <div class="popup">
+                    <div class="content1">
+                        <a class="close" href="#">&times;</a>
+                        <div id="formtext">
+                            <div id="logintitle"> LOGIN </div>
+                            <form action="hometrial.html" id="formdata" method="post">
+                                Username:
+                                <input type="text" name="username" id="login1" required> </br>
+                                Password:
+                                <input type="password" name="password" id="login2"  required> </br>
+                                <input type="submit" name="logindata" value="LOGIN" onclick="check()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu text-glow-hover">
+            <ul>
+                <li> <a onclick="loadXMLDoc('act.html')">Action</a></li>
+                <li>Drama</li>
+                <li>Sci-fi</li>
+                <li>Horror</li>
+                <li>Romance</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content" id="frame">
+        <ul class="cards col1">
+            <li class="left">
+             <a href="y0.html">
+                <!-- <a onclick="loadXMLDoc('act.html')"> -->
+                    <img src="images/action/avengers.jpg">
+                </a>
+            </li>
+            <li class="left">
+                <a href="am2.html">
+                    <img src="images/action/furious7.jpg">
+                </a>
+            </li>
+            <li class="left">
+                <a href="am6.html">
+                    <img src="images/action/mad_max.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="am5.html"><img src="images/action/maze_runner.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="am3.html"><img src="images/action/star_trek_into_darkness.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="am4.html"><img src="images/action/terminator.jpg"></a>
+            </li>
+        </ul>
+        <ul class="cards col2">
+            <li class="left">
+                <a href="dm3.html"><img src="images/drama/12_years_a_slave.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="dm4.html"><img src="images/drama/macbeth.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="dm5.html"><img src="images/drama/everest.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="dm2.html"><img src="images/drama/schindlers_list.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="dm1.html"><img src="images/drama/the_shawshank_redemption.jpg"></a>
+            </li>
+            <li class="left">
+                <a href="dm6.html"><img src="images/drama/the_walk.jpg"></a>
+            </li>
+        </ul>
+        <ul class="cards colcenter">
+            <li>
+                <a href="vice.html"><img src="images/scifi/vice.jpg"></a>
+            </li>
+            <li>
+                <a href="chappie.html"><img src="images/scifi/chappie.jpg"></a>
+            </li>
+            <li>
+                <a href="tomorrowland.html"><img src="images/scifi/tomorrowland.jpg"></a>
+            </li>
+            <li>
+                <a href="jupiterascending.html"><img src="images/scifi/jupiter_ascending.jpg"></a>
+            </li>
+            <li>
+                <a href="insurgent.html"><img src="images/scifi/insurgent.jpg"></a>
+            </li>
+            <li>
+                <a href="harbingerdown.html"><img src="images/scifi/harbinger_down.jpg"></a>
+            </li>
+        </ul>
+        <ul class="cards col3">
+            <li class="right">
+                <a href="annabelle.html"><img src="images/horror/annabelle.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="oculus.html"><img src="images/horror/oculus.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="poltergeist.html"><img src="images/horror/poltergeist.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="sinister2.html"><img src="images/horror/sinister2.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="thevisit.html"><img src="images/horror/the_visit.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="insidious3.html"><img src="images/horror/insidious_chapter3.jpg"></a>
+            </li>
+        </ul>
+        <ul class="cards col4">
+            <li class="right">
+                <a href="ageofadaline.html"><img src="images/romantic/age_of_adeline.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="cinderella.html"><img src="images/romantic/cinderella.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="thebestofme.html"><img src="images/romantic/the_best_of_me.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="faultinourstars.html"><img src="images/romantic/the_fault_in_our_stars.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="thelongestride.html"><img src="images/romantic/the_longest_ride.jpg"></a>
+            </li>
+            <li class="right">
+                <a href="trainwreck.html"><img src="images/romantic/trainwreck.jpg"></a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; 2015 Moviebow Inc. All rights reserved.</p>
+    </div>
+    <!-- </div>
+
+ -->
+</body>
+
+</html>

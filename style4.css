@@ -1,0 +1,140 @@
+#pagetitle {
+    float: left;
+    margin-left: 5%;
+    padding-left: 80px;
+}
+
+#login {
+    /*top:0;
+ right:0;
+ font-family: Constantia;
+ font-size: 20 px;*/
+    float: right;
+    font-family: Constantia;
+    /*margin: 0%;*/
+    border: 2px solid white;
+    /*background-color: #778899;
+ opacity: 0.5;*/
+    background-color: rgba(50, 50, 50, 0.7);
+    margin-top: 2%;
+    border-radius: 20px;
+    padding: 0.5%;
+    font-size: 20px;
+    margin-right: 5%;
+}
+
+#signup {
+    float: right;
+    font-family: Constantia;
+    /*margin: 0%;*/
+    border: 2px solid white;
+    /*background-color: #778899;
+ opacity: 0.5;*/
+    background-color: rgba(50, 50, 50, 0.7);
+    margin-top: 2%;
+    border-radius: 20px;
+    padding: 0.5%;
+    font-size: 20px;
+    margin-right: 5%;
+}
+
+#titleline {
+    float: right;
+    font-family: menuFont;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#logintitle {
+    font-family: title;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10%;
+    border: 2px solid #222;
+}
+
+#formtext {
+    font-family: Constantia;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 2px white;
+    float: left;
+    display: inline-block;
+    background: linear-gradient(black, #222);
+    /*background-color:#191919; */
+    height: 50%;
+    width: 50%;
+    border: 2px solid white;
+    margin: 20%;
+    margin-top: 5%;
+    /*text-align: left;*/
+    border-radius: 15px;
+}
+
+input {
+    /*margin-left:38%;*/
+    border-radius: 15px;
+    display: inline-block;
+}
+
+input[type=text] {
+    width: 35%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+input[type=email] {
+    width: 35%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+
+input[type=password] {
+    width: 35%;
+    margin-left: 5%;
+}
+
+input[type=submit] {
+    background-color: #000080;
+    color: white;
+    font-family: Constantia;
+    width: 20%;
+    margin-top: 12%;
+    height: 50px;
+    box-shadow: 0 0 10px yellow;
+    font-size: 25px;
+}
+
+input[type=submit]:hover {
+    /*background-color:rgba(198, 198, 178,0.6);*/
+    background-color: rgba(186, 186, 170, 0.6);
+    color: #000080;
+    font-family: Constantia;
+    width: 20%;
+    margin-top: 12%;
+    height: 50px;
+    box-shadow: 0 0 10px yellow;
+}
+
+form {
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+#loginform {
+    font-family: Constantia;
+    font-size: 15px;
+    color: white;
+    float: left;
+    display: inline-block;
+    /*background-color:#191919; */
+    /*height:5%;*/
+    /*width: 50%;*/
+    margin: 0%;
+    margin-top: 0%;
+    margin-right: 20%;
+    /*text-align: left;*/
+    border-radius: 15px;
+    float: right;
+}

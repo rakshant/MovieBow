@@ -1,0 +1,87 @@
+
+video{
+  height: 60%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+.overlay {
+  position: fixed;
+ /* left:10%;*/
+ margin-top: -12%;
+ margin-left: -15%;
+  height: 150%;
+  width: 105%;
+  /*top: 20;
+  bottom: 20;
+  left: 40;
+  right: 20;*/
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+.overlay:target {
+    visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 30px auto;
+  padding: 20px;
+ /* background: #fff;*/
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+/*.popup .close {
+  position: relative;
+  top: 0px;
+  right: auto;
+  
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}*/
+
+.popup .close {
+  top: -15px;
+  float:right;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content1 {
+  margin-top: 0;
+  max-height: 40%;
+  margin-left: 5%;
+  overflow: auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}

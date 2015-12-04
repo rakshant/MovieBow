@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link type="text/css" rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="imagehoverexpt.css">
+    <link rel="stylesheet" href="imagestylesheet.css">
+    <link rel="stylesheet" href="commentsstylesheet.css">
+    <link rel="stylesheet" href="star_rating2.css">
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="pop.css">
+    <link type="text/css" rel="stylesheet" href="poplogin.css">
+    <!-- <script src="new.js"></script> -->
+    <!-- <script src="star_rating2.js"></script> -->
+</head>
+
+<body onload="loading()">
+    <div class="header">
+        <div class="banner">
+            <div id="pagetitle"> &nbsp;&nbsp;&nbsp;&nbsp;Moviebow </div>
+            <div id="load1"></div>
+            <div id="load2"></div>
+            <div id="load3" onclick="logcheck()"></div>
+            <!--  <div id="signup"><a href="#popup2">SIGN UP </a></div>
+            <div id="signup"><a href="#popup3">LOGIN </a></div> -->
+            <div id="popup2" class="overlay">
+                <div class="popup">
+                    <div class="content1">
+                        <a class="close" href="#">&times;</a>
+                        <div id="formtext">
+                            <div id="logintitle"> SIGN UP </div>
+                            <form id="formdata" action="#popup3" method="get">
+                                Username:
+                                <input type="text" name="username" id="signup1" minlength="6" required> </br>
+                                Email ID:
+                                <input type="email" name="emailid" id="signup2" placeholder="abc@example.com" required> </br>
+                                Password:
+                                <input type="password" name="password" id="signup3" minlength="6" required> </br>
+                                <input type="submit" name="signupdata" value="SIGN UP" onclick="saveMy()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup3" class="overlay">
+                <div class="popup">
+                    <div class="content1">
+                        <a class="close" href="#">&times;</a>
+                        <div id="formtext">
+                            <div id="logintitle"> LOGIN </div>
+                            <form action="hometrial.html" id="formdata" method="post">
+                                Username:
+                                <input type="text" name="username" id="login1" required> </br>
+                                Password:
+                                <input type="password" name="password" id="login2" required> </br>
+                                <input type="submit" name="logindata" value="LOGIN" onclick="check()">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu text-glow-hover">
+            <ul>
+                <li>Action</li>
+                <li>Drama</li>
+                <li>Sci-fi</li>
+                <li>Horror</li>
+                <li>Romance</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <div class="content1">
+                    <a class="close" href="#">&times;</a>
+                    <video width="400" controls>
+                        <source src="A2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="element">
+            <div class="moviepic">
+                <img src="images\action\avengers.jpg" id="image1">
+                <span class="movie-content">
+              <span>
+                <a href="#popup1">
+                  <img src="play.png" id="icon">
+                <h1>TRAILER</h1></a>
+              </span></span>
+            </div>
+            <div class="text">
+                <div id="movietitle"> AVENGERS </div>
+                When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of the Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.
+                 <div id="ratingvalue"><span id="ratingtext">RATING: </span></div>
+                <div id="more">
+                    <br/><span id="special">Release date: April 24, 2015 (India) </span>
+                    <br/><span id="special">Director: Joss Whedon </span>
+                    <br/><span id="special">Running time: 3h 15m </span>
+                    <br/><span id="special">Initial DVD release: October 2, 2015 </span>
+                    <br/><span id="special">Film series: The Avengers film series </span></br>
+                </div>
+            </div>
+            <div class="castparent">
+                <div class="cast">
+                    <img src="images\action\cast\chris_evans.jpg">
+                    <span class="text-content"><span><h1>Chris Evans</h1></span></span>
+                </div>
+                <div class="cast">
+                    <img src="images\action\cast\scarlett_johansson.jpg">
+                    <span class="text-content"><span><h1>Michiel</h1></span></span>
+                </div>
+                <div class="cast">
+                    <img src="images\action\cast\robert_downey.jpg">
+                    <span class="text-content"><span><h1>Harrison Ford</h1></span></span>
+                </div>
+            </div>
+            <div id="commentsection">
+                <div id="commenttitle">Comments- </div>
+                <br>
+                <hr> Title:
+                <input type="text" id="name" required/>
+                <br>
+                <br> Comments:
+                <textarea rows="4" cols="50" name="comment" form="usrform" id="com" required></textarea>
+                <br>
+                <br>
+                <!-- ADDDEDDDDD -->
+                <fieldset class="rating">
+                    Your Rating:
+                    <br>
+                    <div id="show"></div>
+                    <input type="radio" id="star5" name="rating" value="5" onclick="star(5)" />
+                    <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" onclick="star(45)" />
+                    <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" onclick="star(4)" />
+                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half" onclick="star(35)" />
+                    <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" onclick="star(3)" />
+                    <label class="full" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" onclick="star(25)" />
+                    <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2" onclick="star(2)" />
+                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" onclick="star(15)" />
+                    <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" onclick="star(1)" />
+                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" onclick="star(50)" />
+                    <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                </fieldset>
+                <br>
+                <input type="button" id="commentbutton" value="SAVE" onclick="saveMyRating()" />
+            </div>
+            <!-- <p id="show"></p> -->
+            <!-- ENDDDDD -->
+            <br>
+            <div id="dt"> </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; 2015 Moviebow Inc. All rights reserved.</p>
+    </div>
+    <script src="ls.js"></script>
+</body>
+
+</html>

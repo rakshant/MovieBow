@@ -1,0 +1,89 @@
+@font-face {
+    font-family: menuFont;
+    src: url(fonts/Bellerose.ttf);
+}
+
+
+hr{
+	margin-bottom: 2%;
+}
+
+#commentsection{
+	color:white;
+	font-family: Constantia;
+	margin-top:2%;
+	margin-left: 12%;
+	width:80%;
+}
+
+#commenttitle{
+	margin-top: 5%;
+	font-size: 25px;
+	font-family: menuFont;
+	text-shadow:0 0 2px yellow;
+}
+
+#commentbutton{
+	border-radius: 10px;
+	background-color: blue;
+	color:white;
+	margin-top: 8%;
+	margin-left: -18%;
+	margin-bottom: 2%;
+	font-family: Constantia;
+	font-size: 20px;
+    padding:0.5%;
+	box-shadow: 0 0 2px yellow;
+	text-shadow: 0 0 1px yellow;
+}
+
+#commentbutton:hover{
+	/*background-color: white;
+	color:blue;*/
+	background-color:#0033FF; 
+	cursor: pointer;
+}
+ table {
+        width: 100%; 
+        /*background-color: gray;*/
+        background-color: #666666;
+        /*background-color: #3A0000;*/
+        /*background-color:#292929;*/
+
+        opacity: 0.5;
+        border:none;
+        font-family: Constantia;
+        margin-left: 0%;
+        border-radius: 5px;
+
+        /*display: inline-block;*/
+    }
+
+    tr,td{
+    	display: inline-block;
+    	border:1px solid white;
+    	text-align: center;
+    	 border-radius: 5px;
+    	 height:auto;
+    	 border:none;
+    	 opacity: 0.9;
+    	 color:white;
+    	/*width:450px;*/
+    }
+   
+
+    
+#star{
+
+
+    background-image: url('star1.png');
+     /*background-color: white;*/
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+/*     width: 15%;
+        height: 60px;*/
+
+}
+
